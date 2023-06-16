@@ -192,13 +192,19 @@
     max-width: 300px;
     min-height: 200px;
     border-radius: 10px;
+    position: relative;
 }
 
 .advanced__icon {
     margin-left: 30px;
+    padding: 20px;
+    width: 40px;
     background-color: var(--DarkViolet);
+    border-radius: 50px;
     background-position: center;
-    background-size: 100px;
+    background-size: 100px 100px;
+    position: absolute;
+    top: -30px;
 }
 
 
