@@ -16,7 +16,6 @@
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-size: 18px;
-    max-width: 1240px;
 }
 
 .lists {
@@ -35,10 +34,18 @@
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
+    max-width: 1240px;
 }
 
 .header__left {
     display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
     gap: 20px;
 }
 
@@ -61,6 +68,8 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    padding-bottom: 150px;
+    max-width: 1240px;
 }
 
 .offer__left {
@@ -97,9 +106,9 @@
 }
 
 .shorts {
-    /* margin: 0 auto;
-    margin-top: 50px;
-    max-width: 1240px; */
+    margin: 0 auto;
+    position: relative;
+    max-width: 1240px;
 }
 
 .shorts__group {
@@ -111,6 +120,10 @@
     margin-top: 50px;
     min-height: 150px;
     border-radius: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -114px;
 }
 
 .shorts__form {
@@ -133,8 +146,118 @@
 .shorts__button {
     padding: 0;
     background-color: var(--Cyan);
+    color: white;
     border: transparent;
     width: 200px;
     min-height: 50px;
     cursor: pointer;
+}
+
+
+.advanced__container {
+    background-color: #eff1f7;
+}
+
+.advanced {
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
+.advanced__title {
+    margin: 0;
+    margin-bottom: 15px;
+    padding-top: 300px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.advanced__subtitle {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.advanced__cards {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.advanced__card {
+    margin-bottom: 100px;
+    padding: 30px;
+    background-color: white;
+    max-width: 300px;
+    min-height: 200px;
+    border-radius: 10px;
+}
+
+.advanced__icon {
+    margin-left: 30px;
+    background-color: var(--DarkViolet);
+    background-position: center;
+    background-size: 100px;
+}
+
+
+.boost {
+    background-image: url(../../images/bg-boost-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--DarkViolet);
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.boost__title {
+    margin: 0;
+    padding-top: 50px;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+}
+
+.boost__link {
+    padding: 15px 30px;
+    border-radius: 25px;
+    color: white;
+    background-color: var(--Cyan);
+    max-width: 200px;
+    text-align: center;
+}
+
+
+.footer__container {
+    background-color: var(--VeryDarkViolet);
+}
+
+.footer {
+    margin: 0 auto;
+    padding: 30px 30px;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1240px;
+}
+
+.footer__lists {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__lists-block {
+    flex-direction: row;
+    gap: 25px;
+}
+
+.footer__text {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: white;
 }
