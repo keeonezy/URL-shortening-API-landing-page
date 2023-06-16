@@ -11,10 +11,12 @@
 }
 
 .body {
+    margin: 0 auto;
     background-color: white;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-size: 18px;
+    max-width: 1240px;
 }
 
 .lists {
@@ -31,7 +33,6 @@
 .header {
     margin: 0 auto;
     margin-top: 30px;
-    max-width: 1240px;
     display: flex;
     justify-content: space-between;
 }
@@ -57,7 +58,6 @@
 .offer {
     margin: 0 auto;
     margin-top: 50px;
-    max-width: 1240px;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -94,4 +94,47 @@
 
 .offer__img {
     margin-right: -250px;
+}
+
+.shorts {
+    /* margin: 0 auto;
+    margin-top: 50px;
+    max-width: 1240px; */
+}
+
+.shorts__group {
+    background-image: url(../../images/bg-shorten-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--DarkViolet);
+    margin: 0 auto;
+    margin-top: 50px;
+    min-height: 150px;
+    border-radius: 20px;
+}
+
+.shorts__form {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 10px;
+}
+
+.shorts__input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    padding-left: 30px;
+    width: 600px;
+    min-height: 50px;
+}
+
+.shorts__button {
+    padding: 0;
+    background-color: var(--Cyan);
+    border: transparent;
+    width: 200px;
+    min-height: 50px;
+    cursor: pointer;
 }
