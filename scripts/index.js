@@ -31,6 +31,14 @@ async function getShortUrl() {
     resultButton.addEventListener("click", (e) => {
         e.preventDefault();
         navigator.clipboard.writeText(resultText.value);
+        resultButton.textContent = 'Скопировалось!'
+        resultButton.style.backgroundColor = 'hsl(260, 8%, 14%)';
+        resultButton.style.color = 'white';
+
+        setTimeout(() => {
+            resultButton.textContent = 'Скопировать'
+            resultButton.style.backgroundColor = 'hsl(180, 66%, 49%)';
+        }, 1000);
     });
 
     searchInput.value = "";
@@ -42,16 +50,3 @@ function goResult(e) {
 }
 
 searchButton.addEventListener("click", goResult);
-
-
-// function setLocalStorage() {
-//     localStorage.setItem("adviceCounter", inputSearch.value);
-// }
-// window.addEventListener("beforeunload", setLocalStorage);
-
-// function getLocalStorage() {
-//     if (localStorage.getItem("adviceCounter")) {
-//         inputSearch.value = localStorage.getItem("adviceCounter");
-//     }
-// }
-// window.addEventListener("load", getLocalStorage);
