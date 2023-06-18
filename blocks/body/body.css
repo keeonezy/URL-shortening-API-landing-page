@@ -10,6 +10,14 @@
     --VeryDarkViolet: hsl(260, 8%, 14%);
 }
 
+.line {
+    padding: 3px;
+    position: absolute;
+    background-color: aqua;
+    width: 80%;
+    top: 50%;
+}
+
 .body {
     margin: 0 auto;
     background-color: white;
@@ -215,6 +223,7 @@
     display: flex;
     justify-content: center;
     gap: 40px;
+    position: relative;
 }
 
 .advanced__card {
@@ -227,11 +236,11 @@
     position: relative;
 }
 
-.advanced__card:nth-child(2) {
+.advanced__card:nth-child(3) {
     transform: translateY(2rem);
 }
 
-.advanced__card:nth-child(3) {
+.advanced__card:last-child {
     transform: translateY(4rem);
 }
 
