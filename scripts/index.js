@@ -7,11 +7,10 @@ async function getShortUrl() {
     const url = `https://api.shrtco.de/v2/shorten?url=${searchInput.value}`;
     const res = await fetch(url);
     const data = await res.json();
-
+    
     resultShort.textContent = data.result.full_short_link;
-    searchInput.value = "";
     resultContainer.style.display = "block";
-
+    searchInput.value = "";
 }
 
 function goResult(e) {
