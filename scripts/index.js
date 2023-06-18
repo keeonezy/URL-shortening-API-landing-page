@@ -4,41 +4,38 @@
 const searchInput = document.querySelector(".shorts__input");
 const searchButton = document.querySelector(".shorts__button");
 const resultContainer = document.querySelector(".shorts__results");
-const resultShortInput = document.querySelector(".shorts__result-input");
 
 async function getShortUrl() {
-    if (!searchInput.value) {
-        alert("url введи")
-    } else {
-        const url = `https://api.shrtco.de/v2/shorten?url=${searchInput.value}`;
-        const res = await fetch(url);
-        const data = await res.json();
+    const url = `https://api.shrtco.de/v2/shorten?url=${searchInput.value}`;
+    const res = await fetch(url);
+    const data = await res.json();
 
-        resultContainer.style.display = "block";
-        // с form не работает
-        const urlCard = document.createElement("div");
-        urlCard.className = "shorts__result";
-        urlCard.innerHTML = `
+    resultContainer.style.display = "block";
+
+    // с form не работает. использовать div
+    const newShort = document.createElement("div");
+    newShort.classList.add('shorts__result');
+    newShort.innerHTML = `
     <p class="boost__title" style="color: black;">${data.result.original_link}</p>
-    <a href="http://${data.result.short_link}" target="_blank" class="short-url">${data.result.short_link}</a>
-      <button class="shorts__result-button">Скопировать</button>`;
+    <input class="shorts__result-input" value="" readonly type="text">
+      <button class="shorts__result-button">Скопировать</button>
+      `;
 
-        resultContainer.appendChild(urlCard);
-        const resultButton = document.querySelector(".shorts__result-button");
-        const resultText = document.querySelector(".short-url");
-        resultButton.addEventListener("click", (e) => {
-            e.preventDefault();
-            navigator.clipboard.writeText(resultText.textContent);
-        });
+    // метод appendChild работает не корректно. не добавляет новые input при множестве
+    resultContainer.prepend(newShort);
 
-        // function copyResult(e) {
-        //     e.preventDefault();
-        //     navigator.clipboard.writeText(resultText.textContent);
-        // }
+    const resultButton = document.querySelector(".shorts__result-button");
+    const resultText = document.querySelector(".shorts__result-input");
+    resultText.value = data.result.short_link;
+    resultButton.addEventListener("click", copyResult);
 
-
-        searchInput.value = "";
+    function copyResult(e) {
+        e.preventDefault();
+        navigator.clipboard.writeText(resultText.textContent);
     }
+
+
+    searchInput.value = "";
 }
 
 function goResult(e) {
