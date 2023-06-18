@@ -8,13 +8,17 @@ const resultShortInput = document.querySelector(".shorts__result-input");
 const resultButton = document.querySelector(".shorts__result-button");
 
 async function getShortUrl() {
-    const url = `https://api.shrtco.de/v2/shorten?url=${searchInput.value}`;
-    const res = await fetch(url);
-    const data = await res.json();
+    if (!searchInput.value) {
+        alert("url введи")
+    } else {
+        const url = `https://api.shrtco.de/v2/shorten?url=${searchInput.value}`;
+        const res = await fetch(url);
+        const data = await res.json();
 
-    resultShortInput.value = data.result.full_short_link;
-    resultContainer.style.display = "block";
-    searchInput.value = "";
+        resultShortInput.value = data.result.full_short_link;
+        resultContainer.style.display = "block";
+        searchInput.value = "";
+    }
 }
 
 function goResult(e) {
