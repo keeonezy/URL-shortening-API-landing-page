@@ -124,6 +124,7 @@
     left: 0;
     right: 0;
     top: -114px;
+    overflow: auto;
 }
 
 .shorts__form {
@@ -151,6 +152,12 @@
     width: 200px;
     min-height: 50px;
     cursor: pointer;
+}
+
+.shorts__result {
+    background-color: #fff;
+    padding: 30px;
+    display: none;
 }
 
 
