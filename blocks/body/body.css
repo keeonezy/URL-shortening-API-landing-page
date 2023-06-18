@@ -37,6 +37,12 @@
     max-width: 1240px;
 }
 
+@media screen and (max-width: 940px) {
+    .header {
+        margin: 30px 30px 0 30px;
+    }
+}
+
 .header__left {
     display: flex;
     align-items: center;
@@ -47,6 +53,34 @@
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+@media screen and (max-width: 940px) {
+    .header__right {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .header__nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .header__burger {
+        background-image: url(../../images/burger.svg);
+        background-repeat: no-repeat;
+        background-size: 30px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+}
+
+.header__logo {
+    width: 121px;
+    height: 33px;
 }
 
 .header__lists {
@@ -72,11 +106,24 @@
     max-width: 1240px;
 }
 
+@media screen and (max-width: 940px) {
+    .offer {
+        flex-direction: column-reverse;
+    }
+}
+
 .offer__left {
     display: flex;
     justify-content: center;
     flex-direction: column;
     max-width: 550px;
+}
+
+@media screen and (max-width: 940px) {
+    .offer__left {
+        margin: 0 30px;
+        align-items: center;
+    }
 }
 
 .offer__title {
@@ -86,10 +133,18 @@
     font-weight: 700;
 }
 
+@media screen and (max-width: 940px) {
+    .offer__title {
+        text-align: center;
+        font-size: 40px;
+    }
+}
+
 .offer__subtitle {
     margin: 0;
     margin-bottom: 30px;
     color: var(--GrayishViolet);
+    text-align: center;
 }
 
 .offer__link {
@@ -103,6 +158,12 @@
 
 .offer__img {
     margin-right: -250px;
+}
+
+@media screen and (max-width: 940px) {
+    .offer__img {
+        width: 100%;
+    }
 }
 
 .shorts {
@@ -135,12 +196,18 @@
     gap: 10px;
 }
 
+@media screen and (max-width: 940px) {
+    .shorts__form {
+        flex-direction: column;
+    }
+}
+
 .shorts__input {
     margin: 0;
     padding: 0;
     border: 0;
     padding-left: 30px;
-    width: 600px;
+    /* max-width: 600px; */
     min-height: 50px;
 }
 
@@ -152,6 +219,12 @@
     width: 200px;
     min-height: 50px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 940px) {
+    .shorts__button {
+        width: 100%;
+    }
 }
 
 .shorts__results {
