@@ -1,3 +1,4 @@
+import "./index.css";
 // Advice:
 // 1. tooltip: https://www.w3schools.com/css/css_tooltip.asp
 
